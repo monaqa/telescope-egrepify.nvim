@@ -175,7 +175,7 @@ return function(opts)
         if not text then
           return
         end
-        text = text:gsub("\n", " ")
+        text = text:gsub("\n", "")
         local start = not vim.tbl_isempty(data["submatches"]) and data["submatches"][1]["start"] or 0
         local filename = data["path"]["text"]
         local lnum = data["line_number"]
